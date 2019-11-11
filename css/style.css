@@ -296,16 +296,16 @@ table {
         padding: 0px 40px;
     }
     nav .logo {
-        font-size: 25px;
+        font-size: 17px;
     }
     nav ul li a {
         line-height: 80px;
         color: #fff;
-        padding: 5px 25px;
+        padding: 5px 10px;
         text-decoration: none;
         text-transform: uppercase;
         transition: .3s;
-        font-size: 14px;
+        font-size: 12px;
     }
     .avatar img {
         height: 300px;
