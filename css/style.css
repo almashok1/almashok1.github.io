@@ -291,24 +291,17 @@ table {
     .main h2 {
         font-size: 18px;
     }
-    .black {
-        height: 60px;
-        padding: 0px 40px;
-    }
-    nav {
-        display: none;
-    }
     nav .logo {
-        font-size: 17px;
+        font-size: 15px;
     }
     nav ul li a {
         line-height: 80px;
         color: #fff;
-        padding: 5px 10px;
+        padding: 2px 5px;
         text-decoration: none;
         text-transform: uppercase;
         transition: .3s;
-        font-size: 12px;
+        font-size: 11px;
     }
     .avatar img {
         height: 300px;
