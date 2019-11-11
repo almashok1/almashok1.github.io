@@ -3,6 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 body {
     font-family: 'Lexend Deca', sans-serif;
@@ -17,6 +18,9 @@ nav {
     padding: 10px 100px;
     transition: 0.5s;
     font-family: 'Lexend Deca', sans-serif;
+    background: rgba(21, 21, 90, 0.6);
+    height: 65px;
+    padding: 0px 40px;
 }
 nav .logo {
     float: left;
@@ -26,11 +30,6 @@ nav .logo {
     padding-top: 5px;
     color: #fff;
     font-family: 'Poiret One', cursive;
-}
-.black {
-    background: rgba(0, 0, 102, 0.6);
-    height: 65px;
-    padding: 0px 40px;
 }
 nav ul {
     float: right;
@@ -62,7 +61,7 @@ nav ul li a:hover {
     background-attachment: fixed;
     background-size: cover;
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
     box-shadow: 6px 0px 600px #111;
 }
@@ -76,6 +75,8 @@ nav ul li a:hover {
     font-family: 'Lexend Tera', sans-serif;
     font-size: 30px;
     text-align: right;
+    transition: 1s all;
+    transform: translate(300%);
     color: #f1c40f;
     text-shadow: 1px 1px 2px #111;
     margin-bottom: 15px;
@@ -89,7 +90,9 @@ h1 {
     padding: 10px;
     box-shadow: 6px 6px 20px #111;
 }
-.main h2 {
+#lefted {
+    transform: translate(-300%);
+    transition: 1s all;
     font-family: 'Lexend Tera', sans-serif;
     margin-top: 15px;
     color: #f1c40f;
@@ -160,12 +163,15 @@ h1 {
 
 .avatar-wrap {
     filter: drop-shadow(0px 10px 6px rgba(50, 50, 0, 0.5));
+    text-align: center;
 }
 .avatar img{
     margin-left: auto;
     margin-right: auto;
     display: block;
     height: 350px;
+    transition: .5s height;
+    width: auto;
     clip-path: circle(50% at 50% 50%);
 }
 .progress {
@@ -198,9 +204,6 @@ h1 {
 .p4 {
     width: 40%;
 }
-.p5 {
-    width: 30%;
-}
 .portfolio-wrap {
     position: relative;
     z-index: 1;
@@ -224,13 +227,16 @@ h1 {
 .gallery {
     margin-top: 50px;
 }
+.gallery img {
+    height: 100%;
+}
 .pf {
     border: 2px solid #667eea;
     margin-left: auto;
     margin-right: auto;
     display: block;
-    height: 150px;
-    width: 400px;
+    height: 200px;
+    width: 401px;
     background: #fff;
 }
 .pf span {
@@ -238,14 +244,14 @@ h1 {
     justify-content: center;
 }
 .contacts {
-    margin-top: -240px;
-    padding-bottom: 300px;
+    margin-top: -260px;
+    padding-bottom: 220px;
     background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898; 
     background-blend-mode: multiply,multiply;
 }
-.contacts .container {
+.contacts .cont {
     color: #fff;    
-    transform: translateY(230px);
+    transform: translateY(220px);
 }
 .contacts h2 {
     font-size: 35px;
@@ -264,6 +270,11 @@ h1 {
 }
 .contact i {
     padding: 0 50px;
+}
+table {
+    color: #111;
+    margin-top: 20px;
+    width: 100%;
 }
 @media screen and (min-width: 800px) {
     .column {
@@ -303,20 +314,20 @@ h1 {
         padding-bottom: 300px;
     }
     .portfolio {
-        margin-top: -270px;
-        padding-bottom: 700px;
-    }
-    .portfolio .container {
-        transform: translateY(240px);
+        margin-top: -310px;
+        padding-bottom: 600px;
     }
     .pf {
-        width: 90%;
+        width: 401px;
     }
     .contacts {
-        margin-top: -370px;
+        margin-top: -410px;
     }
     .contacts .container {
         transform: translateY(260px);
+    }
+    .contacts .title {
+        transform: translateX(50px);
     }
     .contact i {
         padding: 0 20px;
@@ -344,9 +355,49 @@ h1 {
         font-size: 20px;
     }
     .contact i {
-        font-size: 20px;
+        font-size: 30px;
     }
     .pf span {
         font-size: 12px;
+    }
+}
+
+button {
+    padding: 8px;
+    width: 150px; 
+    outline: none;
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    color: white;
+    font-size: 16px;
+    border: 2px rgb(46, 154, 168) solid; 
+    border-radius: 20px;
+}
+button:hover {
+    background: rgb(221, 174, 130);
+}
+#dragon {
+    transition: 1s all;
+    width: 20%;
+    height: auto;
+    animation-duration: 2.5s;
+    animation-name: logo, rotate;
+    animation-iteration-count: infinite;
+    overflow: hidden;
+}
+@keyframes logo {
+    0% {
+        margin-left: 0%;
+      }
+    
+    50% {
+        margin-left: 70%;
+    }
+    100% {
+        margin-left: 0%;
+    }
+}
+@keyframes rotate{
+    50% {
+        transform: rotate(180deg);
     }
 }
