@@ -295,6 +295,9 @@ table {
         height: 60px;
         padding: 0px 40px;
     }
+    nav {
+        display: none;
+    }
     nav .logo {
         font-size: 17px;
     }
